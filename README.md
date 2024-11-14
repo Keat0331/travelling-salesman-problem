@@ -4,19 +4,20 @@ This project addresses the Traveling Salesman Problem (TSP) using Genetic Algori
 
 ## Project Structure
 - **`Graph_Verification/`**: Contains the optimal results for the TSP problem instances used.
-- **`tsp_solver/`**: The main genetic algorithm implementation and parallelized versions are located in the source folder.
+- **`tsp_solver/`**: Includes the main genetic algorithm implementations:
+  - **`TspSolver.cpp`**: Single-threaded version.
+  - **`TspSolverOmp.cpp`**: OpenMP-parallelized version for multi-core CPUs.
+  - **`TspSolverCuda.cu`**: CUDA-parallelized version for GPUs.
 
 ## Implementation Details
-- **Genetic Algorithm**: The primary solution for solving TSP. This implementation is not fully optimized, but it serves as a useful reference.
+- **Genetic Algorithm**: The core algorithm used to solve the TSP. This implementation is not fully optimized but serves as a solid reference.
 - **Parallelization**:
-  - **CUDA**: GPU-accelerated version for faster computation.
-  - **OpenMP**: Multithreaded CPU version to improve processing time on multi-core systems.
+  - **CUDA**: Uses GPU acceleration for faster computation.
+  - **OpenMP**: Multithreaded CPU version for improved processing time on multi-core systems.
 
 ## How to Run
-1. use Visual Studio to run it.
-2. For CUDA and OpenMP, ensure your system supports these parallelization libraries.
+1. Use Visual Studio to run `main.cpp` via the command line interface (CLI).
+2. For CUDA and OpenMP versions, ensure your system has the necessary support for these parallelization libraries.
 
 ## Note
-This algorithm is still in a reference state and is not fully optimized.
-
-
+This algorithm is intended as a reference and is not fully optimized.
